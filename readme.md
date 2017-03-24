@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a GitHub starter repo for Project 1 using Gulp, SASS, and THD's UX StyleGuide.
+This is a GitHub starter repo for Project 1 using Gulp, SASS, and [THD's UX StyleGuide](http://ux.homedepot.com/style-guide/).
 
 You can fork this repository and then clone your fork to begin work on your project. Once you have the repository cloned you will need to install the npm and bower dependencies and use `gulp` to run the project via a simple HTTP server (`connect`). `gulp` is configured to run your project in developer mode or build your project for a production deployment. In developer mode `gulp` will watch your filesystem for changes and run any needed preprocessors (SASS).
 

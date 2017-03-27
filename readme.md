@@ -30,8 +30,15 @@ cd <my-project-1>                 # cd into the new project folder
 yarn                              # a better version of `npm install`
 ```
 
+3b. Run the `update-lib.sh` to copy the ux-styleguide CSS library to a `lib` folder.
 
-3b. Use `bower` to install the bower dependencies. Note that you can *skip* this step if you are not using jQuery or any other Bower managed dependencies.
+This step is needed because the `ux-styleguide` thinks we need all of these dependencies (like `gulp`) that we really don't need. To keep our git repository clean we don't want to include the `node_modules` directory but we do want to include the `ux-styleguide` since we are deploying to _GitHub Pages_.
+
+```bash
+./update-lib.sh
+```
+
+3c. Use `bower` to install the bower dependencies. Note that you can *skip* this step if you are not using jQuery or any other Bower managed dependencies.
 
 ```bash
 bower install                     # installs jQuery and any other bower dependencies
@@ -53,7 +60,20 @@ Each time you edit a file in atom, save it and reload the browser page to see th
 You can host a _live_ deployment of your project via gh-pages. Simply create a `gh-pages` branch and you are good.
 
 ```bash
-git checkout -b gh-pages
+git checkout -b gh-pages   # create and checkout the gh-pages branch
+git push                   # push the new branch to GitHub
+git checkout master        # go back to working on master
 ```
 
 Your project will then be hosted at https://pages.github.homedepot.com/<yourGitHubName>/<yourProjectName>.
+
+#### Updating GitHub Pages
+
+Each time you make changes to master and want to publish those to gh-pages, do the following:
+
+```bash
+git checkout gh-pages       # checkout gh-pages branch
+git merge master            # merge master into gh-pages
+git push                    # push the changes to GitHub
+git checkout master         # go back to working on master
+```

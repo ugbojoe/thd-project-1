@@ -23,13 +23,20 @@ cd <my-project-1>                 # cd into the new project folder
 
 ### Step 3 - Install the Project Dependencies
 
-Use `yarn` (or `npm install`) to install the NodeJS dependencies for building and managing the project.
-Use `bower` to install the bower dependencies (currently just jQuery).
+3a. Use `yarn` (or `npm install`) to install the NodeJS dependencies for building and managing the project.
+
 
 ```bash
 yarn                              # a better version of `npm install`
+```
+
+
+3b. Use `bower` to install the bower dependencies. Note that you can *skip* this step if you are not using jQuery or any other Bower managed dependencies.
+
+```bash
 bower install                     # installs jQuery and any other bower dependencies
 ```
+
 
 ### Step 4 - Test it out and get to work
 
@@ -41,27 +48,12 @@ open index.html.     # load the page into the default browser
 Each time you edit a file in atom, save it and reload the browser page to see the results.
 
 
-
 ### Deploying to GitHub Pages
 
-You can host a _live_ deployment of your project via gh-pages. Here are the steps to setup your repo for gh-pages:
-
-#### Step 1
-
-Remove the `dist` directory from the project’s `.gitignore` file (it’s ignored by default by Yeoman).
-
-#### Step 2
-
-Make sure git knows about your subtree (the subfolder with your site).
+You can host a _live_ deployment of your project via gh-pages. Simply create a `gh-pages` branch and you are good.
 
 ```bash
-git add dist && git commit -m "Initial dist subtree commit"
+git checkout -b gh-pages
 ```
 
-#### Step 3
-
-Use subtree push to send it to the `gh-pages` branch on GitHub.
-
-```bash
-git subtree push --prefix dist origin gh-pages
-```
+Your project will then be hosted at https://pages.github.homedepot.com/<yourGitHubName>/<yourProjectName>.

@@ -5,9 +5,10 @@
     <title>Project 1 Starter - Simple CSS</title>
     <link rel="stylesheet" href="node_modules/ux-styleguide/dist/ux-styleguide.min.css">
     <link rel="stylesheet" href="main.css">
+    <script async src="main.js"></script>
   </head>
-  <body>
-    <div class="header">
+  <body onload="initApp();">
+    <header class="header">
       <div class="header-logo">
           <i class="icon_homedepot"></i>
       </div>
@@ -24,11 +25,18 @@
           <div><i class="icon_cart"></i></div>
           <div><i class="icon_settings"></i></div>
       </div>
-    </div>
-    <div class="content">
+    </header>
+
+    <main class="content">
       <div class="hero-unit">
         <h1>Project 1 Starter - Simple CSS</h1>
+        <h3>Verify that everything is loading</h3>
+        <ol>
+          <li>If you see a nice Home Depot banner at the top, they you have successfully loaded the THD UX StyleGuide.</li>
+          <li class="blueBorder">If this text has a blue border around it, you have successfully loaded your main.css custom stylesheet.</li>
+          <li>If your JavaScript console has the message: "Hello from JavaScript land.", you have successfully loaded your main.js JavaScript file.</li>
+        </ol>
       </div>
-    </div>
+    </main>
   </body>
 </html>

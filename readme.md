@@ -1,4 +1,4 @@
-# Project 1 Starter Repo using SASS and Gulp
+# Project 1 Starter Repo using Simple Project Structure and CSS
 
 ## Introduction
 

@@ -63,4 +63,4 @@ Simply enable GitHub Pages for your GitHub repository in your browser via the Gi
 
 Your project will then be hosted at https://pages.github.homedepot.com/yourGitHubName/yourProjectName.
 
-NOTE: This project is hosted https://pages.github.homedepot.com/OrangeMethod/project-1-starter-simple-css/[here].
+NOTE: This project is hosted [here](https://pages.github.homedepot.com/OrangeMethod/project-1-starter-simple-css/).

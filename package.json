@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ux-styleguide": "^1.7.2"
+    "ux-styleguide": "^2.0.0"
   }
 }

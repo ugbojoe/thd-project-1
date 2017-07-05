@@ -9,3 +9,5 @@ echo "to our GitHub Pages deployment."
 rm -rf lib
 mkdir lib
 cp -R node_modules/ux-styleguide lib
+
+rm -rf lib/ux-styleguide/examples

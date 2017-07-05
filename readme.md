@@ -57,23 +57,10 @@ Each time you edit a file in atom, save it and reload the browser page to see th
 
 ### Deploying to GitHub Pages
 
-You can host a _live_ deployment of your project via gh-pages. Simply create a `gh-pages` branch and you are good.
+You can host a _live_ deployment of your project via GitHub Pages.
 
-```bash
-git checkout -b gh-pages   # create and checkout the gh-pages branch
-git push                   # push the new branch to GitHub
-git checkout master        # go back to working on master
-```
+Simply enable GitHub Pages for your GitHub repository in your browser via the GitHub repo _Settings_ tab. In the "GitHub Pages" section set the "Source" to "master branch" and click "Save".
 
-Your project will then be hosted at https://pages.github.homedepot.com/<yourGitHubName>/<yourProjectName>.
+Your project will then be hosted at https://pages.github.homedepot.com/yourGitHubName/yourProjectName.
 
-#### Updating GitHub Pages
-
-Each time you make changes to master and want to publish those to gh-pages, do the following:
-
-```bash
-git checkout gh-pages       # checkout gh-pages branch
-git merge master            # merge master into gh-pages
-git push                    # push the changes to GitHub
-git checkout master         # go back to working on master
-```
+NOTE: This project is hosted https://pages.github.homedepot.com/OrangeMethod/project-1-starter-simple-css/[here].

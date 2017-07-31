@@ -1,14 +1,9 @@
-function initApp() {
-  console.log('Hello from JavaScript land.');
-  updateTheSubmitButton();
-}
+// function initApp() {
+//   console.log('Hello from JavaScript land.');
+//   updateTheSubmitButton();
+// }
 
-function updateTheSubmitButton() {
-  var submitButton = document.getElementById('submit');
-  console.log('submitButton:', submitButton);
-  submitButton.innerHTML = 'Display Skus';
-}
-// Manual Sku Submit
+// Manually Enter number in inpur box and display on enter submit - Manual Entry
 function addSku(e) {
  if (e.keyCode === 13) {
    let userInput = document.getElementById('sku-input');
@@ -16,35 +11,28 @@ function addSku(e) {
    let li = document.createElement('li');
    li.appendChild(textNode);
 
-   let sku = document.getElementById('sku');
+   let sku = document.getElementById('skugen');
    sku.appendChild(li);
 
    userInput.value = '';
    return false;  // prevents event from bubbling
  }
 }
-// 4 functions
-// 1st - 7digit sku randomization
-// 2nd - 10digit sku randomization
-// 3rd - quantity incrementer of 1 or 2
-// 4th - display to screen result of 1 & 3 or 2 & 3
+// Random Number Generation for auto gen - Auto Gen
 function skuRnd() {
-    var x = document.getElementById("sku")
-    x.innerHTML = Math.floor((Math.random()* 1041000) + 1041000000);
-}
-// AutoGen Sku Submit
-function genSku(f) {
- if (f.keyCode === 13) {
-   let userInput = document.getElementById('autoGen');
-   let textNode = document.createTextNode(userInput.value);
-  //  let li = document.createElement('li');
-   let li = document.createElement('p');
-   li.appendChild(textNode);
-
-   let sku = document.getElementById('sku');
-   sku.appendChild(li);
-
-   userInput.value = '';
-   return false;  // prevents event from bubbling
- }
-}
+  console.log("button clicked");
+  var totalIterations = parseInt(document.getElementById('input').value);
+  console.log(totalIterations);
+  var output = document.getElementById('output');
+  output.innerHTML = '';
+  for(var i = 1; i <= totalIterations; i++) {
+       let sku = Math.floor((Math.random() * 1039999) + 1039999999);
+       console.log('sku:', sku);
+       // var item = document.createElement('div');
+       // var item = document.createElement('li');
+       var listItem = document.createElement("li");
+       var textNode = document.createTextNode(sku);
+       listItem.appendChild(textNode);
+       output.appendChild(listItem);
+   }
+};
